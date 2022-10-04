@@ -1,0 +1,26 @@
+@import './typohrapy';
+@import './variables';
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    a{
+        text-decoration: none;
+        padding: 0em 1em;
+        font-family: 'Iceland';
+        font-size: 3em;
+        color: $white;
+    }
+    @media (min-width: 320px) and (max-width: 1024px) {
+        a{
+            font-size: 2em;
+            img{
+                height: 1em
+            }
+        }
+
+    }
+};
+
