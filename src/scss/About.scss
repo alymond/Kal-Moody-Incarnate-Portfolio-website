@@ -1,2 +1,69 @@
 @import "./components/nav";
 @import "./Global.scss";
+@import "./components/typohrapy";
+@import "./components/variables";
+@import "./components/button";
+
+*{
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+main{
+    color: $white;
+    margin: 0 10em;
+    display: flex;
+    flex-direction: row;
+    .tex{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-family: 'Iceland';
+        font-size: 5em;
+        margin-top: 5rem;
+    }
+    p{
+        font-family: 'Josefin Sans';
+        font-size: 2em; 
+        padding: 1em .4rem;
+    }  
+    #about-image{
+        height: 57em;
+    }
+    @media (min-width: 320px) and (max-width: 1024px) {
+        #about-image{
+            display: none;
+        }
+        h1{
+            font-family: 'Iceland';
+            font-size: 3rem;
+            margin-top: 5rem;
+        }
+        p{
+            font-family: 'Josefin Sans';
+            font-size: 1rem; 
+            padding: 1em .4rem;
+        }    
+      }
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    a{
+        img{
+        height: 2em;
+        padding-right: 2em;
+    }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    main{
+        margin: 3em;
+    }
+  }
+

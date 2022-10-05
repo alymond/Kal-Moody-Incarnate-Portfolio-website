@@ -23,6 +23,7 @@ nav a {
 }
 
 body {
+  background-color: #442342;
   background-image: url("/images/bg.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -40,6 +41,13 @@ body {
   border-radius: 4px;
 }
 
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 a {
   color: #fff;
 }
@@ -54,6 +62,7 @@ main #homescreenimage {
 }
 main .text .name {
   color: #fff;
+  cursor: pointer;
 }
 main .text .name h1 {
   padding-top: 5rem;
@@ -69,19 +78,19 @@ main .text .name h1 #span1::before {
   content: "Moody";
   display: block;
   position: absolute;
-  top: 150px;
-  left: 850px;
+  top: 155px;
+  left: 760px;
 }
 main .text .name h1 #span1::after {
   content: "Moody";
   display: block;
   position: absolute;
   top: 150px;
-  left: 850px;
+  left: 755px;
 }
 main .text .name h1 #span1::before {
   animation: glitch1 0.3s linear 6;
-  color: #ff00aa;
+  color: #ff0015;
   z-index: -2;
   animation-iteration-count: infinite;
 }
@@ -94,42 +103,42 @@ main .text .name h1 #span1::after {
 @keyframes glitch1 {
   0% {
     top: 150px;
-    left: 850px;
+    left: 755px;
   }
   20% {
     top: 155px;
-    left: 855px;
+    left: 760px;
   }
   40% {
     top: 150px;
-    left: 850px;
+    left: 755px;
   }
   60% {
     top: 155px;
-    left: 855px;
+    left: 760px;
   }
   80% {
     top: 150px;
-    left: 850px;
+    left: 755px;
   }
 }
 main .text .name h1 #span2::before {
   content: "Incarnate";
   display: block;
   position: absolute;
-  top: 310px;
-  left: 850px;
+  top: 305px;
+  left: 755px;
 }
 main .text .name h1 #span2::after {
   content: "Incarnate";
   display: block;
   position: absolute;
-  top: 290px;
-  left: 850px;
+  top: 300px;
+  left: 760px;
 }
 main .text .name h1 #span2::before {
   animation: glitch 0.3s linear 6;
-  color: #ff00aa;
+  color: #ff192d;
   z-index: -2;
   animation-iteration-count: infinite;
 }
@@ -141,24 +150,24 @@ main .text .name h1 #span2::after {
 }
 @keyframes glitch {
   0% {
-    top: 290px;
-    left: 850px;
+    top: 305px;
+    left: 755px;
   }
   20% {
     top: 300px;
-    left: 840px;
+    left: 760px;
   }
   40% {
-    top: 290px;
-    left: 850px;
+    top: 305px;
+    left: 755px;
   }
   60% {
     top: 300px;
-    left: 840px;
+    left: 760px;
   }
   80% {
-    top: 290px;
-    left: 850px;
+    top: 305px;
+    left: 755px;
   }
 }
 main .text .name h2 {
@@ -194,9 +203,33 @@ main .text a {
   }
 }
 
+.socials {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 0;
+}
+.socials a img {
+  height: 4em;
+  padding: 0 2em;
+}
+
 @media (min-width: 320px) and (max-width: 1024px) {
   .name {
     display: none;
+  }
+  .socials {
+    background-color: #E06196;
+    block-size: inherit;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 11.5em;
+    position: sticky;
+  }
+  .socials a img {
+    height: 4em;
+    padding: 0 2em;
   }
 }
 

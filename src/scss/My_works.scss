@@ -1,2 +1,45 @@
 @import "./components/nav";
-@import "./Global.scss";
+
+
+
+
+.image-grid {
+    --gap: 1em;
+    --num-cols: 4;
+    --row-height: 300px;
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  }
+    
+  .image-grid-col-2 {
+    grid-column: span 2;
+    grid-row: span 6;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .image-grid {
+      --num-cols: 1;
+      --row-height: 5%;
+      img {
+        size: 50%;
+        object-fit: contain;
+      }
+      
+    }
+    .image-grid-col-2 {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+  }
